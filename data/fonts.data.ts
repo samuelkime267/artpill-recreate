@@ -1,11 +1,11 @@
-import { Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 
-const spaceGrotesk = Space_Grotesk({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
+const neue = localFont({
+  src: "../assets/fonts/PPNeueMontreal-Regular.woff",
+  variable: "--font-neue",
+  weight: "400",
 });
 
-const fonts = `${spaceGrotesk.variable}`;
+const fonts = `${neue.variable}`;
 
 export default fonts;
