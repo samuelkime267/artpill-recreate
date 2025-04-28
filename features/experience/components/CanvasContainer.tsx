@@ -2,6 +2,7 @@
 
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience";
+import { Leva } from "leva";
 
 export default function CanvasContainer() {
   // const width = 2;
@@ -9,8 +10,9 @@ export default function CanvasContainer() {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full">
+      <Leva />
       <Canvas
-        camera={{ position: [0, 0, 2], fov: 70, near: 0.001, far: 1000 }}
+        camera={{ position: [0, 0, 2], fov: 45, near: 0.001, far: 1000 }}
         dpr={[1, 2]}
         // orthographic
         // camera={{

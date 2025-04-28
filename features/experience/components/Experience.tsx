@@ -1,33 +1,34 @@
 "use client";
 
 import * as THREE from "three";
+import { Environment, OrbitControls } from "@react-three/drei";
+import { useControls } from "leva";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import fragmentShader from "../shaders/plane.fragment.glsl";
-import vertexShader from "../shaders/plane.vertex.glsl";
+import Pill from "./Pill";
 
 export default function Experience() {
-  const shaderMaterialRef = useRef<THREE.ShaderMaterial>(null);
-  useFrame(({ clock }) => {
-    if (!shaderMaterialRef.current) return;
-    shaderMaterialRef.current.uniforms.time.value = clock.getElapsedTime();
+  const { pillColor } = useControls({
+    pillColor: "#def947",
+    // pillColor: "#48d9fa",
+  });
+
+  const groupRef = useRef<THREE.Group>(null);
+
+  useFrame(() => {
+    if (!groupRef.current) return;
+
+    groupRef.current.rotation.y += 0.05;
   });
 
   return (
     <>
+      <Environment backgroundIntensity={0} files="/environment/map.hdr" />
       <OrbitControls />
 
-      <mesh>
-        <shaderMaterial
-          ref={shaderMaterialRef}
-          uniforms={{ time: { value: 0 } }}
-          side={THREE.DoubleSide}
-          fragmentShader={fragmentShader}
-          vertexShader={vertexShader}
-        />
-        <planeGeometry args={[1, 1, 1, 1]} />
-      </mesh>
+      <group ref={groupRef} position={[-0.05, 0.18, 0]}>
+        <Pill pillColor={pillColor} />
+      </group>
     </>
   );
 }
