@@ -8,7 +8,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 export default function Hero() {
   const { progress } = useProgress();
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoaded] = useState(true);
   const heroContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
