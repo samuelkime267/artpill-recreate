@@ -65,7 +65,7 @@ export default function Hero() {
           start: "top top",
           end: "+=50%",
           scrub: true,
-          // markers: true,
+          markers: true,
           pin: true,
         },
       });

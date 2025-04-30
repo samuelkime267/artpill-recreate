@@ -24,7 +24,7 @@ export default function WhitePillScrollAni() {
           trigger: scrollContainer,
           start: "-=50% top",
           end: "+=150%",
-          // markers: true,
+          markers: true,
           scrub: true,
         },
       });
