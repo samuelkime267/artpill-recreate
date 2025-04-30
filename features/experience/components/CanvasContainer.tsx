@@ -9,7 +9,7 @@ export default function CanvasContainer() {
   // const height = 1;
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full">
+    <div className="fixed top-0 left-0 w-full h-full z-10">
       <Leva />
       <Canvas
         camera={{ position: [0, 0, 2], fov: 45, near: 0.001, far: 1000 }}

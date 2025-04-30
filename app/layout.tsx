@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import fonts from "@/data/fonts.data";
 import Navbar from "@/component/Navbar";
+import { ReactLenis } from "lenis/react";
 
 export const metadata: Metadata = {
   title: "Art Pill Recreation",
@@ -16,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fonts} antialiased`}>
-        <Navbar />
-        {children}
+        <ReactLenis root>
+          <Navbar />
+          {children}
+        </ReactLenis>
       </body>
     </html>
   );
