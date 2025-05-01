@@ -4,7 +4,7 @@ import BlendCreativity from "@/component/BlendCreativity";
 
 export default function Home() {
   return (
-    <main id="scroll-container" className="min-h-[500vh]">
+    <main id="scroll-container" className="min-h-[600vh]">
       <CanvasContainer />
       <Hero />
       <BlendCreativity />

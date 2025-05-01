@@ -24,7 +24,7 @@ export default function WhitePillScrollAni() {
           trigger: scrollContainer,
           start: "top +=100%",
           end: "+=150%",
-          markers: true,
+          // markers: true,
           scrub: true,
         },
       });
@@ -94,8 +94,9 @@ export default function WhitePillScrollAni() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: scrollContainer,
-          start: "+=55% top",
-          end: "+=80%",
+          start: "+=45% top",
+          end: "+=150%",
+          // markers: true,
           scrub: true,
         },
       });
