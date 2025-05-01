@@ -22,7 +22,7 @@ export default function WhitePillScrollAni() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: scrollContainer,
-          start: "-=50% top",
+          start: "top +=100%",
           end: "+=150%",
           markers: true,
           scrub: true,

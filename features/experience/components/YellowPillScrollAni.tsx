@@ -27,9 +27,8 @@ export default function YellowPillScrollAni() {
         scrollTrigger: {
           trigger: scrollContainer,
           start: "top top",
-          end: "+=50%",
+          end: "+=100%",
           scrub: true,
-          pin: true,
         },
       });
 

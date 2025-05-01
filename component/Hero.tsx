@@ -63,7 +63,7 @@ export default function Hero() {
         scrollTrigger: {
           trigger: heroContainerRef.current,
           start: "top top",
-          end: "+=50%",
+          end: "+=100%",
           scrub: true,
           markers: true,
           pin: true,
@@ -81,7 +81,7 @@ export default function Hero() {
   return (
     <section
       ref={heroContainerRef}
-      className="w-full h-screen flex items-center justify-center"
+      className="w-full h-screen flex items-center justify-center border border-red-900"
       id="hero"
     >
       <h1 className="text-9xl flex items-center justify-center flex-col">
